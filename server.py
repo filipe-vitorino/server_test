@@ -14,8 +14,8 @@ def receber_leitura():
     if not data:
         return jsonify({"status": "erro", "mensagem": "JSON inválido"}), 400
 
-    # 🔹 Print do JSON bruto recebido
-    print("\n📥 JSON bruto recebido do app Flutter:")
+   
+    print("\n JSON bruto recebido do app Flutter:")
     print(data)
 
     # Campos esperados na leitura
@@ -42,7 +42,7 @@ def receber_leitura():
     longitude = data["longitude"]
     logs = data["logs"]
 
-    print(f"\n✅ Recebida leitura {leitura_id} do dispositivo {device_name} (ID: {device_id})")
+    print(f"\n Recebida leitura {leitura_id} do dispositivo {device_name} (ID: {device_id})")
     print(f"Timestamp: {data['dataLeitura']}, total logs: {total_registros}")
     print(f"Latitude: {latitude}, Longitude: {longitude}")
     print("Logs enviados:")
